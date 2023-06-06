@@ -3,11 +3,11 @@
   align-items: center;
   justify-content: flex-start;
   gap: 2rem;
-  background-color: #FAFAFA;
+  background-color: #fafafa;
   height: 3.125rem;
-  margin: .625rem .625rem 0 .625rem;
-  padding: 0 .9375rem 0 .9375rem;
-  border-radius: .1875rem;
+  margin: 0.625rem 0.625rem 0 0.625rem;
+  padding: 0 0.9375rem 0 0.9375rem;
+  border-radius: 0.1875rem;
 
   &-img {
     width: 2rem;
@@ -15,8 +15,12 @@
   }
   &-nav {
     display: flex;
+  }
+  &-ul {
+    width: 18.75rem;
+    background-color: aqua;
+    display: flex;
     justify-content: space-evenly;
-    width: 300px;
     gap: 2rem;
   }
   &-a {

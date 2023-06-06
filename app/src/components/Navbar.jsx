@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import "../styles/reset.css"
+import { MenuData } from "../MenuData";
 
 function Navbar() {
   const navRef = useRef();
@@ -9,12 +9,18 @@ function Navbar() {
   };
 
   return (
-    <header>
-      <img src="" alt="StayFinder" />
-      <nav ref={navRef}>
-        <a href="/#">Section-1</a>
-        <a href="/#">Section-2</a>
-        <a href="/#">Section-3</a>
+    <header className="Header">
+      <img className="Header-img" src="" alt="StayFinder" />
+      <nav className="Header-nav" ref={navRef}>
+        <ul className="Header-ul">
+            {MenuData.map((item, index) => {
+                return (
+                    <li key={index} className={item.className}>
+                        <a className="Header-a" href={item.url}>{item.title}</a>
+                    </li>
+                );
+            })}
+        </ul>
       </nav>
     </header>
   );
