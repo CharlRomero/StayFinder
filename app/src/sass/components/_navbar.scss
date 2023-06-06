@@ -1,0 +1,26 @@
+.Header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+  background-color: #FAFAFA;
+  height: 3.125rem;
+  margin: .625rem .625rem 0 .625rem;
+  padding: 0 .9375rem 0 .9375rem;
+  border-radius: .1875rem;
+
+  &-img {
+    width: 2rem;
+    height: 2rem;
+  }
+  &-nav {
+    display: flex;
+    justify-content: space-evenly;
+    width: 300px;
+    gap: 2rem;
+  }
+  &-a {
+    font-size: 1rem;
+    color: black;
+  }
+}
