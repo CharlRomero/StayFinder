@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import { MenuData } from "../MenuData";
+import Button from "./Button";
 
 function Navbar() {
   const navRef = useRef();
@@ -10,18 +11,21 @@ function Navbar() {
 
   return (
     <header className="Header">
-      <img className="Header-img" src="" alt="StayFinder" />
       <nav className="Header-nav" ref={navRef}>
+        <img className="Header-img" src="" alt="StayFinder" />
         <ul className="Header-ul">
-            {MenuData.map((item, index) => {
-                return (
-                    <li key={index} className={item.className}>
-                        <a className="Header-a" href={item.url}>{item.title}</a>
-                    </li>
-                );
-            })}
+          {MenuData.map((item, index) => {
+            return (
+              <li key={index} className={item.className}>
+                <a className="Header-a" href={item.url}>
+                  {item.title}
+                </a>
+              </li>
+            );
+          })}
         </ul>
       </nav>
+      <Button className="Header-button" />
     </header>
   );
 }

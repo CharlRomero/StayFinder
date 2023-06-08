@@ -1,11 +1,11 @@
 .Header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   gap: 2rem;
   background-color: #fafafa;
   height: 3.125rem;
-  margin: 0.625rem 0.625rem 0 0.625rem;
+  margin: 0.625rem 1.5rem 0 1.5rem;
   padding: 0 0.9375rem 0 0.9375rem;
   border-radius: 0.1875rem;
 
@@ -18,13 +18,17 @@
   }
   &-ul {
     width: 18.75rem;
-    background-color: aqua;
     display: flex;
     justify-content: space-evenly;
+    align-items: center;
     gap: 2rem;
   }
   &-a {
     font-size: 1rem;
     color: black;
+  }
+  &-button {
+    position: absolute;
+    right: 350px;
   }
 }
