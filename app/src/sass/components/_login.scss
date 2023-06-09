@@ -1,0 +1,63 @@
+.Login {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #505050;
+  opacity: 0.6;
+  cursor: default;
+
+  &-button {
+    cursor: pointer;
+  }
+
+  &-box {
+    min-width: 34.375rem;
+    min-height: 43.75rem;
+    background: #fafafa;
+    border-radius: 0.1875rem;
+    display: grid;
+    grid-template-rows: 3.125rem 1fr 1fr;
+    position: relative;
+    animation: fadeInDown 0.8s;
+  }
+
+  @keyframes fadeInDown {
+    0% {
+      opacity: 0;
+      transform: translateY(-3.125rem);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.Box {
+  &-welcome {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    padding: 0 0 0 1rem;
+  }
+}
+
+.Form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    &-input{
+        width: 65%;
+        padding: .625rem;
+        border-radius: .1875rem;
+        border: 1px solid black;
+    }
+}

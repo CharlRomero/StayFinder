@@ -25,7 +25,7 @@ function Navbar() {
           })}
         </ul>
       </nav>
-      <Button className="Header-button" />
+      <Button className="Header-button" title="Login" />
     </header>
   );
 }
