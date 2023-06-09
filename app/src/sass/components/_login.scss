@@ -26,6 +26,25 @@
     animation: fadeInDown 0.8s;
   }
 
+  &-auth {
+    display: flex;
+    justify-content: start;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &-google {
+    width: 65%;
+    padding: .625rem;
+    border-radius: .1875rem;
+    border: 1px solid black;
+    cursor: pointer;
+  }
+
+  &-google:hover {
+    background-color: #dedddd;
+  }
+
   @keyframes fadeInDown {
     0% {
       opacity: 0;

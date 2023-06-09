@@ -1,12 +1,14 @@
-import React from "react";
-import Navbar from "./components/Navbar";
-import LogIn from "./components/LogIn";
+import { Routes, Route } from "react-router-dom";
+import { Home } from "./components/Home";
+import { AuthProvider } from "./context/authContext";
 
 function App() {
   return (
-    <React.Fragment>
-      <Navbar />
-    </React.Fragment>
+    <AuthProvider>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </AuthProvider>
   );
 }
 

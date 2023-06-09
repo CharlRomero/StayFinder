@@ -2,7 +2,7 @@ import { useRef } from "react";
 import { MenuData } from "../MenuData";
 import Button from "./Button";
 
-function Navbar() {
+export function Navbar() {
   const navRef = useRef();
 
   const showNavbar = () => {
@@ -29,5 +29,3 @@ function Navbar() {
     </header>
   );
 }
-
-export default Navbar;
