@@ -8,7 +8,7 @@ export function Home() {
     <main className="Main">
       <Navbar />
       <section className="Main-user">
-        <p className="Main-p">Bienvenido <span className="Main-span">{user.displayName}</span></p>
+        <p className="Main-p">Bienvenido <span className="Main-span">{}</span></p>
       </section>
     </main>
   );

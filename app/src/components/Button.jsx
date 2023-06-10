@@ -1,17 +1,22 @@
+import { useState } from "react";
 import Login from "../assets/login.svg";
-import LogIn from "./LogIn";
-import React from "react";
+import LoginModal from "./LoginModal";
 
 function Button(props) {
-  const [show, setShow] = React.useState(false);
+
+  const [active, setActive] = useState(false);
+
+  const toggle = () => {
+    setActive(!active);
+  };
 
   return (
     <div className="Button">
       <img className="Button-img" src={Login} alt="" />
-      <button className="Button-button" onClick={() => setShow(true)}>
+      <button className="Button-button" onClick={toggle}>
         {props.title}
       </button>
-      <LogIn show={show} onClose={() => setShow(false)}></LogIn>
+      <LoginModal active={active} toggle={toggle} />
     </div>
   );
 }

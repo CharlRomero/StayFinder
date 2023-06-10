@@ -1,6 +1,7 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import { MenuData } from "../MenuData";
 import Button from "./Button";
+import LoginModal from "./LoginModal";
 
 export function Navbar() {
   const navRef = useRef();
