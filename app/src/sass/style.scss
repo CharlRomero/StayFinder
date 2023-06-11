@@ -1,5 +1,12 @@
 @use './base/reset';
 
+//Variables
+@import './base/variables';
+
+//Mixins
+@import './mixins/mixinFlex';
+
+//Components
 @import './components/navbar';
 @import './components/button';
 @import './components/login';

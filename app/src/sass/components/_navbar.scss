@@ -1,9 +1,7 @@
 .Header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include flex(flex, space-between, center);
   gap: 2rem;
-  background-color: #fafafa;
+  background-color: map-get($colors, "white");
   height: 3.125rem;
   margin: 0.625rem 1.5rem 0 1.5rem;
   padding: 0 0.9375rem 0 0.9375rem;
@@ -13,22 +11,25 @@
     width: 2rem;
     height: 2rem;
   }
+
   &-nav {
-    display: flex;
+    @include flex(flex, center, center);
   }
+
   &-ul {
     width: 18.75rem;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    @include flex(flex, space-evenly, center);
     gap: 2rem;
   }
+
   &-a {
     font-size: 1rem;
     color: black;
+    font-family: map-get($fonts, "subtitle");
   }
+
   &-button {
-    position: absolute;
-    right: 350px;
+    position: relative;
+    right: 0;
   }
 }
