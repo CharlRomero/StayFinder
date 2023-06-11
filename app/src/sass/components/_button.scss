@@ -1,24 +1,27 @@
 .Button {
   color: black;
-  background-color: #CB915B;
-  padding: .625rem 1rem .625rem 1rem;
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-  align-items: center;
-  border-radius: .1875rem;
+  background-color: map-get($colors, "primary");
+  padding: 0.625rem 0.875rem 0.625rem 0.75rem;
+  @include flex();
+  gap: 0.3125rem;
+  border-radius: 3px;
+  font-family: map-get($fonts, "subtitle");
 
   &-img {
     width: 1rem;
     height: 1rem;
   }
-  
+
   &-button {
     cursor: pointer;
+  }
+
+  &--form {
+    width: 21.875rem;
   }
 }
 
 .Button:hover {
-    background-color: #9E6841;
-    cursor: pointer;
+  box-shadow: 0 4px 4px map-get($colors, "black");
+  cursor: pointer;
 }

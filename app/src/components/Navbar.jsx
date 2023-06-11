@@ -1,18 +1,20 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { MenuData } from "../MenuData";
 import Button from "./Button";
 import LoginModal from "./LoginModal";
+import Login from "../assets/login.svg";
+
 
 export function Navbar() {
-  const navRef = useRef();
+  const [active, setActive] = useState(false);
 
-  const showNavbar = () => {
-    navRef.current.classList.toggle("responsive_nav");
+  const toggle = () => {
+    setActive(!active);
   };
 
   return (
     <header className="Header">
-      <nav className="Header-nav" ref={navRef}>
+      <nav className="Header-nav">
         <img className="Header-img" src="" alt="StayFinder" />
         <ul className="Header-ul">
           {MenuData.map((item, index) => {
@@ -26,7 +28,10 @@ export function Navbar() {
           })}
         </ul>
       </nav>
-      <Button className="Header-button" title="Login" />
+      <Button className="Button" title="Login" toggle={toggle} onClick={toggle}>
+        <img className="Button-img" src={Login} alt="" />
+      </Button>
+      <LoginModal active={active} toggle={toggle} />
     </header>
   );
 }
