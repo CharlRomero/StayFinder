@@ -28,7 +28,7 @@ export function Navbar() {
           })}
         </ul>
       </nav>
-      <Button className="Button" title="Login" toggle={toggle} onClick={toggle}>
+      <Button className="Button Button--primary" title="Login" toggle={toggle} onClick={toggle}>
         <img className="Button-img" src={Login} alt="" />
       </Button>
       <LoginModal active={active} toggle={toggle} />
