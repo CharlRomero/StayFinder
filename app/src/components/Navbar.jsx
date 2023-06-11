@@ -4,7 +4,6 @@ import Button from "./Button";
 import LoginModal from "./LoginModal";
 import Login from "../assets/login.svg";
 
-
 export function Navbar() {
   const [active, setActive] = useState(false);
 
@@ -28,7 +27,12 @@ export function Navbar() {
           })}
         </ul>
       </nav>
-      <Button className="Button Button--primary" title="Login" toggle={toggle} onClick={toggle}>
+      <Button
+        className="Button Button--primary"
+        title="Login"
+        toggle={toggle}
+        onClick={toggle}
+      >
         <img className="Button-img" src={Login} alt="" />
       </Button>
       <LoginModal active={active} toggle={toggle} />
