@@ -1,10 +1,17 @@
 .Main {
-    
-    &-user {
-        margin: .3125rem 1.5625rem 0 1.5625rem;
-    }
+  margin: 0.625rem 0.875rem 0 0.875rem;
 
-    &-span {
-        font-weight: bold;
-    }
+  &-user {
+    @include flex(flex, flex-end, center);
+    padding: 0.625rem 0 0.625rem 0;
+  }
+
+  &-p {
+    font-family: map-get($fonts, "subtitle");
+    font-size: 1.25em;
+  }
+
+  &-span {
+    font-weight: bold;
+  }
 }
